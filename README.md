@@ -16,14 +16,35 @@ Ce document présente les bases du développement d'une **application web** *fro
 ## 🖥️ **HTML : HyperText Markup Language**  
 
 ### 🔹 Définition  
-HTML est un **langage de balisage** qui définit la structure et le contenu d'une page web. Il est composé d'éléments comme :  
+HTML est un **langage de balisage** qui définit la structure et le contenu d'une page web. Il est composé d'éléments comme : Sigma (Section(sous-section(div(element))))...
 - **Texte, images, liens, vidéos, tableaux…**  
+   - `<p>` : Paragraphe de texte  
+      ```html
+      <p>Ceci est un paragraphe</p>
+      ```
+   - `<img>` : Image  
+      ```html
+      <img src="image.jpg" alt="Description">
+      ```
+   - `<a>` : Lien hypertexte  
+      ```html
+      <a href="https://www.example.com">Visiter le site</a>
+      ```
+   - `<video>` : Vidéo  
+      ```html
+      <video src="video.mp4" controls></video>
+      ```
+   - `<table>` : Tableau  
+      ```html
+      <table>
+        <tr><td>Cellule 1</td></tr>
+      </table>
+      ```  
 - **Balises de structure** :  
   - `<div>` : Division qui regroupe plusieurs éléments.  
-  - `<section>` : Regroupe une partie du contenu d’une page.  
-  - `<article>` : Contenu autonome (blog, news…).  
+  - `<section>` : Regroupe une partie du contenu d’une page.   
 
-### 🔹 Balises principales  
+### 🔹 NB :  
 ✅ **Balises en bloc** : `<div>`, `<p>`, `<section>` (prennent toute la largeur).  
 ✅ **Balises en ligne** : `<span>`, `<a>`, `<strong>` (ne prennent que la largeur de leur contenu).  
 
@@ -50,22 +71,26 @@ HTML est un **langage de balisage** qui définit la structure et le contenu d'un
 ### 🎯 **2. Styles de base**  
 
 #### 📌 **2.1 Positions**  
-1. **Méthode 1** : Position absolue  
+1. **Position absolue**
    ```css
    position: absolute;
    top: 10px; right: 10px; bottom: 10px; left: 10px;
    ```  
-2. **Méthode 2** : Flexbox  
+2. **Flexbox**
    ```css
+   /* Positionnée un élément a l’intérieur d’une div */
    display: flex;
-   align-items: center;  /* Centrage vertical */
-   justify-content: space-between;  /* Espacement */
+   align-items: center;  /* Centrage vertical / div */
+   align-content: center; /* Centrage Horizontal / div */
+   justify-content: space-between;  /* Espacement  */
    ```  
-3. **Méthode 3** : Grid  
+3. **Grid**
    ```css
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   grid-column: 4 / 4;
+   grid-column: 4 / 4; /*position de lelement*/
+   /*Vous pouvez faire grid-template-row ou grid-row  */
+   /*grid-column: 2 / span 2; prendre 2 colonnes à partir de la colonne 2 */
    ```  
 
 #### 🎨 **2.2 Couleurs**  
@@ -122,46 +147,3 @@ background-color: lightgray;
 ```  
 
 ---
-
-## 🚀 **Point de départ pour les développeurs**  
-
-1️⃣ **Créer une structure HTML de base**  
-   ```html
-   <!DOCTYPE html>
-   <html lang="fr">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Mon Projet Web</title>
-       <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-       <header class="header">Bienvenue sur mon site</header>
-       <section>
-           <p>Contenu principal ici.</p>
-       </section>
-   </body>
-   </html>
-   ```  
-
-2️⃣ **Créer un fichier `style.css`**  
-   ```css
-   body {
-       font-family: Arial, sans-serif;
-       background-color: #f0f0f0;
-   }
-   .header {
-       background-color: blue;
-       color: white;
-       text-align: center;
-       padding: 10px;
-   }
-   ```  
-
-3️⃣ **Ajout d’un script JavaScript (`script.js`)**  
-   ```js
-   document.addEventListener("DOMContentLoaded", function() {
-       console.log("Le site est chargé !");
-   });
-   ```  
-
