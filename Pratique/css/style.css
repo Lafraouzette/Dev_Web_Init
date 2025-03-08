@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: contrast(150%) brightness(80%);
+    background-position: 100%;
+   
+}
+
+.header {
+
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+
+.header a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(210, 230, 138);
+    padding: 5px 5px;
+    border-radius: 5%;
+
+}
+
+.conteneur_infos_bref {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60px;
+}
+
+.infos {
+    background-color: rgba(255, 255, 255, 0.858);
+    grid-row: 1/1;
+    grid-column: 2/2;
+    border-radius: 5%;
+    padding: 5px 5px;
+   
+}
+
+.infos img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+}
+
+.infos p {}
+
+.photop {}
+
+.test {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* --------------------------------------- P A R C O U R S A C A D E M I Q U E ---------------------------------------  */
+.conteneur_parcours_académique {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.conteneur_parcours_académique h1 {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(210, 230, 138);
+    padding: 5px 5px;
+}
+
+
+
+th,td {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.76);
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5%;
+}
+
+/* --------------------------------------- F O O T E R ---------------------------------------  */
+.conteneur_footer {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.conteneur_footer a {
+    color: #ffffff;
+    
+    text-decoration: none;
+
+}
+
+.fa-linkedin {
+    color: rgb(0, 30, 255);
+}
+
+.fa-google {
+
+    color: red;
+}
+.conteneur_footer h4{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(210, 230, 138);
+    padding: 5px 5px;
+}
+.fa-phone{
+    color:black;
+}
+.fa-github{
+    color:black;
+}
