@@ -135,8 +135,8 @@ a:hover {
 
 #### 📏 **2.7 Espacement entre les balises**  
 ```css
-margin: 10px;
-padding: 10px;
+margin: 10px; espacement hors conteneur
+padding: 10px; espacement dans conteneur
 ```  
 
 #### 🎨 **2.8 Arrière-plan et espacement**  
